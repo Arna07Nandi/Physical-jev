@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "luxic"
+version = "3.0.0"
+description = "Luxic-330M: Zero-Shot Multivariate Time-Series & Calibrated Typed Decision Vertical Foundation Model"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.26.0",
+    "scipy>=1.11.0",
+    "fastapi>=0.92.0",
+    "uvicorn>=0.17.6",
+    "pydantic>=1.10.4",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["luxic*"]

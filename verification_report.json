@@ -1,0 +1,211 @@
+{
+  "training": {
+    "epoch_0_loss": 2.1178,
+    "final_loss": 0.1293,
+    "epoch_0_acc_pct": 16.5,
+    "final_train_acc_pct": 99.0,
+    "calibration": {
+      "q_hat_temp_c": 0.9613,
+      "optimal_temperature": 0.8087,
+      "cal_ece": 0.0208,
+      "cal_brier": 0.0598
+    }
+  },
+  "quantization": {
+    "fp64_bytes": 259584,
+    "int8_bytes": 32488,
+    "compression_ratio": 7.99
+  },
+  "v1_naive_eval": {
+    "clean": {
+      "mae_temp_c": 20.766,
+      "mae_load_mw": 29.035,
+      "p10_p90_coverage_pct": 13.1,
+      "decision_accuracy_pct": 17.5,
+      "ece": 0.7863,
+      "brier_score": 1.6025,
+      "mean_latency_ms": 0.107
+    },
+    "regime_shift": {
+      "mae_temp_c": 24.744,
+      "mae_load_mw": 33.375,
+      "p10_p90_coverage_pct": 14.3,
+      "decision_accuracy_pct": 11.7,
+      "ece": 0.8209,
+      "brier_score": 1.6655,
+      "mean_latency_ms": 0.104
+    },
+    "sensor_dropout": {
+      "mae_temp_c": 30.866,
+      "mae_load_mw": 46.278,
+      "p10_p90_coverage_pct": 23.0,
+      "decision_accuracy_pct": 18.3,
+      "ece": 0.777,
+      "brier_score": 1.5546,
+      "mean_latency_ms": 0.107
+    },
+    "harmonic_spikes": {
+      "mae_temp_c": 25.244,
+      "mae_load_mw": 41.254,
+      "p10_p90_coverage_pct": 54.9,
+      "decision_accuracy_pct": 0.0,
+      "ece": 0.9374,
+      "brier_score": 1.9114,
+      "mean_latency_ms": 0.105
+    },
+    "covariate_shock": {
+      "mae_temp_c": 23.258,
+      "mae_load_mw": 32.921,
+      "p10_p90_coverage_pct": 14.6,
+      "decision_accuracy_pct": 3.3,
+      "ece": 0.9237,
+      "brier_score": 1.871,
+      "mean_latency_ms": 0.104
+    },
+    "mixed": {
+      "mae_temp_c": 24.132,
+      "mae_load_mw": 35.362,
+      "p10_p90_coverage_pct": 26.3,
+      "decision_accuracy_pct": 6.7,
+      "ece": 0.8932,
+      "brier_score": 1.7876,
+      "mean_latency_ms": 0.104
+    }
+  },
+  "fp64_eval": {
+    "clean": {
+      "mae_temp_c": 0.706,
+      "rmse_temp_c": 0.872,
+      "mae_load_mw": 1.656,
+      "p10_p90_coverage_pct": 78.2,
+      "decision_accuracy_pct": 94.2,
+      "ece": 0.0211,
+      "brier_score": 0.0988,
+      "mean_verifiable_reward": 0.904,
+      "mean_latency_ms": 1.102
+    },
+    "regime_shift": {
+      "mae_temp_c": 2.615,
+      "rmse_temp_c": 2.736,
+      "mae_load_mw": 5.9,
+      "p10_p90_coverage_pct": 75.3,
+      "decision_accuracy_pct": 93.3,
+      "ece": 0.0395,
+      "brier_score": 0.0889,
+      "mean_verifiable_reward": 0.808,
+      "mean_latency_ms": 1.115
+    },
+    "sensor_dropout": {
+      "mae_temp_c": 0.767,
+      "rmse_temp_c": 0.941,
+      "mae_load_mw": 1.808,
+      "p10_p90_coverage_pct": 73.9,
+      "decision_accuracy_pct": 94.2,
+      "ece": 0.0282,
+      "brier_score": 0.0947,
+      "mean_verifiable_reward": 0.883,
+      "mean_latency_ms": 1.147
+    },
+    "harmonic_spikes": {
+      "mae_temp_c": 0.615,
+      "rmse_temp_c": 0.754,
+      "mae_load_mw": 1.467,
+      "p10_p90_coverage_pct": 80.1,
+      "decision_accuracy_pct": 100.0,
+      "ece": 0.0042,
+      "brier_score": 0.0001,
+      "mean_verifiable_reward": 1.0,
+      "mean_latency_ms": 1.131
+    },
+    "covariate_shock": {
+      "mae_temp_c": 0.69,
+      "rmse_temp_c": 0.883,
+      "mae_load_mw": 1.765,
+      "p10_p90_coverage_pct": 86.0,
+      "decision_accuracy_pct": 90.0,
+      "ece": 0.0694,
+      "brier_score": 0.1522,
+      "mean_verifiable_reward": 0.762,
+      "mean_latency_ms": 1.108
+    },
+    "mixed": {
+      "mae_temp_c": 0.964,
+      "rmse_temp_c": 1.117,
+      "mae_load_mw": 2.213,
+      "p10_p90_coverage_pct": 77.2,
+      "decision_accuracy_pct": 95.8,
+      "ece": 0.0199,
+      "brier_score": 0.0668,
+      "mean_verifiable_reward": 0.929,
+      "mean_latency_ms": 1.188
+    }
+  },
+  "int8_edge_eval": {
+    "clean": {
+      "mae_temp_c": 0.706,
+      "rmse_temp_c": 0.872,
+      "mae_load_mw": 1.656,
+      "p10_p90_coverage_pct": 78.2,
+      "decision_accuracy_pct": 95.0,
+      "ece": 0.0294,
+      "brier_score": 0.0988,
+      "mean_verifiable_reward": 0.917,
+      "mean_latency_ms": 1.101
+    },
+    "regime_shift": {
+      "mae_temp_c": 2.615,
+      "rmse_temp_c": 2.736,
+      "mae_load_mw": 5.9,
+      "p10_p90_coverage_pct": 75.3,
+      "decision_accuracy_pct": 93.3,
+      "ece": 0.0398,
+      "brier_score": 0.0891,
+      "mean_verifiable_reward": 0.808,
+      "mean_latency_ms": 1.119
+    },
+    "sensor_dropout": {
+      "mae_temp_c": 0.767,
+      "rmse_temp_c": 0.941,
+      "mae_load_mw": 1.808,
+      "p10_p90_coverage_pct": 73.9,
+      "decision_accuracy_pct": 95.0,
+      "ece": 0.0229,
+      "brier_score": 0.094,
+      "mean_verifiable_reward": 0.896,
+      "mean_latency_ms": 1.15
+    },
+    "harmonic_spikes": {
+      "mae_temp_c": 0.615,
+      "rmse_temp_c": 0.754,
+      "mae_load_mw": 1.467,
+      "p10_p90_coverage_pct": 80.1,
+      "decision_accuracy_pct": 100.0,
+      "ece": 0.0042,
+      "brier_score": 0.0001,
+      "mean_verifiable_reward": 1.0,
+      "mean_latency_ms": 1.127
+    },
+    "covariate_shock": {
+      "mae_temp_c": 0.69,
+      "rmse_temp_c": 0.883,
+      "mae_load_mw": 1.765,
+      "p10_p90_coverage_pct": 86.0,
+      "decision_accuracy_pct": 90.0,
+      "ece": 0.0639,
+      "brier_score": 0.1532,
+      "mean_verifiable_reward": 0.762,
+      "mean_latency_ms": 1.11
+    },
+    "mixed": {
+      "mae_temp_c": 0.964,
+      "rmse_temp_c": 1.117,
+      "mae_load_mw": 2.213,
+      "p10_p90_coverage_pct": 77.2,
+      "decision_accuracy_pct": 95.8,
+      "ece": 0.0198,
+      "brier_score": 0.0658,
+      "mean_verifiable_reward": 0.929,
+      "mean_latency_ms": 1.155
+    }
+  }
+}
